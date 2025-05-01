@@ -1,0 +1,40 @@
+
+{
+  "starting_agent": "Triage Agent",
+  "agents": [
+    {
+      "name": "Triage Agent",
+      "cache_tools_list": true,
+      "model": "gpt-4o-mini",
+      "instructions": "You determine which agent to use.",
+      "assistants": ["Translation Agent", "FileSystem Agent"],
+      "mcp_servers": []
+    },
+    {
+      "name": "Translation Agent",
+      "cache_tools_list": false,
+      "model": "gpt-4o-mini",
+      "instructions": "You are a specialized assistant of translation.",
+      "assistants": [],
+      "mcp_servers": []
+    },
+    {
+      "name": "FileSystem Agent",
+      "cache_tools_list": false,
+      "model": "gpt-4o-mini",
+      "instructions": "You are a specialized assistant of read and write files.",
+      "assistants": [],
+      "mcp_servers": [
+        {
+          "name": "filesystem",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@modelcontextprotocol/server-filesystem",
+            "./"
+          ]
+        }
+      ]
+    }
+  ]
+}
