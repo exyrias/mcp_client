@@ -1,6 +1,5 @@
 import asyncio
-from time import sleep
-from agents import Agent, Runner, function_tool, gen_trace_id, trace, WebSearchTool, ItemHelpers
+from agents import Agent, Runner, gen_trace_id, trace, ItemHelpers
 from agents.mcp import MCPServerStdio
 # from agents.extensions.visualization import draw_graph
 from contextlib import AsyncExitStack
@@ -44,7 +43,7 @@ async def main():
                   'command': server['command'],
                   'args': server['args']
                 },
-                cache_tools_list=ag['cache_tools_list'],
+                cache_tools_list=server['cache_tools_list'],
               )
             )
             for server in ag['mcp_servers']
