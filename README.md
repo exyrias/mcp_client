@@ -4,11 +4,11 @@ This project is an implementation of an MCP (Model Context Protocol) client for 
 
 ## Features
 
-- Supports agent orchestration, allowing multiple agents to collaborate and delegate tasks.
-- Flexible configuration: Add or modify MCP servers dynamically through the configuration file.
+- **Dynamic and Flexible Configuration**: Effortlessly add or modify MCP servers through a simple configuration file. Explore a curated list of powerful MCP servers [here](https://github.com/punkpeye/awesome-mcp-servers) and orchestrate them seamlessly to suit your needs.
+- Supports **agent orchestration**, allowing multiple agents to collaborate and delegate tasks.
 - Easy integration with OpenAI Agents SDK.
 - Scalable design to handle complex workflows with multiple agents.
-- Customizable agent instructions and behavior.
+- **Customizable agent instructions and behavior**.
 
 ## Requirements
 
